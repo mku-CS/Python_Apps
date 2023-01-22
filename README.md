@@ -29,5 +29,6 @@
 
   An app that allows user to randomly generate a string of 8-20 characters.
   User has the option to choose the inclusion of special characters, digits and uppercase letters.
+  
   Generated passwords are stored in external txt file (not safe option - don't do it in real life! :) )
 
