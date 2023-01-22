@@ -44,7 +44,7 @@ def generate_password():
     password = []
     for i in range(0, int(pass_len)):
         password.append(random.choice(characters))
-    current_time = str(datetime.datetime.now())
+    current_time = str(datetime.datetime.now().strftime("%Y.%m.%d %H:%M:%S"))
     passwords_file = open("savedPasswords.txt", "a")
     passwords_file.write("DATETIME: " + current_time + "\n => " + "".join(password) + "\n\n")
     return password
