@@ -1,5 +1,6 @@
 import string
 import random
+import datetime
 
 characters = string.ascii_lowercase
 
@@ -43,8 +44,9 @@ def generate_password():
     password = []
     for i in range(0, int(pass_len)):
         password.append(random.choice(characters))
+    current_time = str(datetime.datetime.now())
     passwords_file = open("savedPasswords.txt", "a")
-    passwords_file.write("".join(password) + "\n")
+    passwords_file.write("DATETIME: " + current_time + "\n => " + "".join(password) + "\n\n")
     return password
 
 
@@ -82,7 +84,7 @@ print(f"\n\t\t{BOLD}{GREEN}Your password:\n\n"
 # 1. ensure at least 2 special characters / digits are included if user chooses to include them
 # 2. OR ask user how many special characters / digits user wants in password
 # 3. write password to file - DONE
-# 4. timestamp in output file
+# 4. timestamp in output file - DONE
 #
 #
 
