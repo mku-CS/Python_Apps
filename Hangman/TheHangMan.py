@@ -115,11 +115,13 @@ def show_results():
 def letter_validation(letter):
     if len(letter) > 1:
         print("No cheating! only one letter at a time!")
-        return
+        return False
     elif not letter.isalpha():
         print("No cheating! Only letters allowed!")
+        return False
     elif letter in used_letters:
         print(f"Stop it, you already checked letter {letter}!")
+        return False
     else:
         return True
 
